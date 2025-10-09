@@ -14,11 +14,11 @@ class Generoseeder extends Seeder
     public function run(): void
     {
         DB::table('generos')->insert(
-            ['name' => "Terror"],
-            ['name' => "Ação"],
-            ['name' => "Comédia"],
-            ['name' => "Romance"],
-            ['name' => "Suspense"],
+            ['nome' => "Terror"],
+            ['nome' => "Ação"],
+            ['nome' => "Comédia"],
+            ['nome' => "Romance"],
+            ['nome' => "Suspense"],
         );
     }
 }
