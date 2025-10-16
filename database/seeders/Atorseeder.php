@@ -14,8 +14,10 @@ class Atorseeder extends Seeder
     public function run(): void
     {
         DB::table('atores')->insert(
+            [
             ['nome' => "Wagner Moura", 'descricao' => "Ator brasileiro", 'nacionalidade_id' => 1],
-            ['nome' => "egan Fox", 'descricao' => "Muito lembrada", 'nacionalidade_id' => 2],
+            ['nome' => "Megan Fox", 'descricao' => "Muito lembrada", 'nacionalidade_id' => 2],
+            ]
         );
     }
 }

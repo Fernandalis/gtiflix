@@ -14,11 +14,13 @@ class Produtoraseeder extends Seeder
     public function run(): void
     {
         DB::table('produtoras')->insert(
+            [
             ['nome' => "Marvel"],
             ['nome' => "Warnerbros"],
             ['nome' => "Universal"],
             ['nome' => "Paramount"],
             ['nome' => "globo"],
+            ]
         );
     }
 }

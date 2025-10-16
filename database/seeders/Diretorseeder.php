@@ -14,8 +14,10 @@ class Diretorseeder extends Seeder
     public function run(): void
     {
         DB::table('diretores')->insert(
+            [
             ['nome' => "John Krasinski", 'descricao' => " diretor top", 'nacionalidade_id' => 3],
             ['nome' => "Michael Sarnoski", 'descricao' => "diretor ajudante", 'nacionalidade_id' => 4],
+            ]
         );
     }
 }

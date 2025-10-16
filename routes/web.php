@@ -45,3 +45,9 @@ route::get('/atores', function() {
     $filme = Filme::all();
     dd($filme);
  });
+
+ route::get('/lista-filmes', function() {
+   $movies = Filme::all();
+   return view('lista-filmes', 
+       compact('movies'));
+});

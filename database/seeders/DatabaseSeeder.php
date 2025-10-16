@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
             Nacionalidadeseeder::class,
             Atorseeder::class,
             Produtoraseeder::class,
+            Diretorseeder::class,
+            Filmeseeder::class,
         ]);
     }
 }
