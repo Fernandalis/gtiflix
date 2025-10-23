@@ -7,9 +7,9 @@ use App\Models\Nacionalidade;
 use App\Models\Filme;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 route::get('/teste', function() {
     echo 'Olá';
@@ -46,8 +46,13 @@ route::get('/atores', function() {
     dd($filme);
  });
 
- route::get('/lista-filmes', function() {
+ route::get('/', function() {
    $movies = Filme::all();
    return view('lista-filmes', 
        compact('movies'));
+});
+
+route::get('/detalhes-filmes/{filme}',
+function(Filme $filme){
+   return view('detalhes-filmes', compact('filme'));
 });
