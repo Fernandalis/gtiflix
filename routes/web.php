@@ -5,6 +5,7 @@ use App\Models\Genero;
 use App\Models\Diretor;
 use App\Models\Nacionalidade;
 use App\Models\Filme;
+use App\Models\Produtora;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -51,7 +52,7 @@ route::get('/atores', function() {
    $movies = Filme::all();
    return view('lista-filmes', 
        compact('movies'));
-});
+})->name('lista-filmes');
 
 route::get('/detalhes-filmes/{filme}',
 function(Filme $filme){
@@ -63,3 +64,36 @@ route::view('/login','login')->name('login');
 route::post('/logar', function (request $request) {
    dd($request);
 })->name('logar');
+
+route::get('/lista-Produtoras', function() {
+   $produtoras = Produtora::all();
+   return view('lista-Produtoras', 
+       compact('produtoras'));
+})->name('lista-produtoras');
+
+route::get('/detalhes-produtoras/{produtoras}',
+function(Produtora $produtoras){
+   return view('detalhes-produtoras', compact('produtoras'));
+})->name('detalhes-produtoras');
+
+route::get('/lista-diretores', function() {
+   $diretores = Diretor::all();
+   return view('lista-diretores', 
+       compact('diretores'));
+})->name('lista-diretores');
+
+route::get('/detalhes-diretores/{diretores}',
+function(Diretor $diretores){
+   return view('detalhes-diretores', compact('diretores'));
+})->name('detalhes-diretores');
+
+route::get('/lista-atores', function() {
+   $atores = Ator::all();
+   return view('lista-atores', 
+       compact('atores'));
+})->name('lista-atores');
+
+route::get('/detalhes-atores/{atores}',
+function(Ator $atores){
+   return view('detalhes-atores', compact('atores'));
+})->name('detalhes-atores');

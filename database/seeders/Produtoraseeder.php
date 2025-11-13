@@ -15,11 +15,11 @@ class Produtoraseeder extends Seeder
     {
         DB::table('produtoras')->insert(
             [
-            ['nome' => "Marvel"],
-            ['nome' => "Warnerbros"],
-            ['nome' => "Universal"],
-            ['nome' => "Paramount"],
-            ['nome' => "globo"],
+            ['nome' => "Marvel", 'descricao' => "Filmes de super heroi"],
+            ['nome' => "Warnerbros", 'descricao' => "Filmes de super heroi"],
+            ['nome' => "Universal", 'descricao' => "Filmes de super heroi"],
+            ['nome' => "Paramount", 'descricao' => "Filmes de super heroi"],
+            ['nome' => "globo" , 'descricao' => "Filmes de super heroi"],
             ]
         );
     }
