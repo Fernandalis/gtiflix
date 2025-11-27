@@ -1,33 +1,46 @@
 <x-base-layout>
-    <!-- Card Blog -->
+
+<!-- Team -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight ">Produtoras</h2>
+  </div>
+  <!-- End Title -->
+
   <!-- Grid -->
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    @foreach($produtoras as $produtoras)
-    <!-- Card -->
-    <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl ">
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+  @foreach($produtoras as $produtora)
+    <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+      <img src="{{$produtora->capa}}" alt="" class="w-20  grow">
+      <div class="grow">
+        <div>
+          <a href="{{route('detalhes-produtoras', $produtora)}}">
+          <h3 class="font-medium text-gray-800 dark:text-Black border rounded-full text-center"  >
+            {{$produtora->nome}}
+          </h3>
+          </a>
+        </div>
+
+        <!-- Social Brands -->
+        <div class="mt-2 sm:mt-auto space-x-2.5 ">
+         
       
-      <div class="p-4 md:p-6">
-        <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 ">
-          Produtora
-        </span>
-        <h3 class="text-xl font-semibold text-gray-800  ">
-          {{$produtoras->nome}}
-        </h3>
-        
-      </div>
-      <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200">
-        <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-b-xl bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none " href="{{route('detalhes-produtoras', $produtoras)}}">
-          Ver detalhes
-        </a>
-        
+        </div>
+        <!-- End Social Brands -->
       </div>
     </div>
-    <!-- End Card -->
     @endforeach
+    <!-- End Col -->
+    </div>
+    <!-- End Col -->
+  </div>
   <!-- End Grid -->
 </div>
-<!-- End Card Blog -->
+<!-- End Team -->
+
 </x-base-layout>
 
 

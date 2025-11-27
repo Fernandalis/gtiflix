@@ -67,6 +67,7 @@ route::post('/logar', function (request $request) {
 
 route::get('/lista-Produtoras', function() {
    $produtoras = Produtora::all();
+   //dd($produtoras);
    return view('lista-Produtoras', 
        compact('produtoras'));
 })->name('lista-produtoras');
